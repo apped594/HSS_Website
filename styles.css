@@ -1,0 +1,452 @@
+*,*::before,* ::after {
+
+    box-sizing: border-box;
+}
+
+body{
+    
+    
+    margin:0;
+    padding:0;
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #5a5a5aa2;
+    background-image: url(/img/6764499_3431856.jpg),
+    linear-gradient(45deg,rgb(0, 60, 188), rgb(247, 7, 7));
+    background-blend-mode:multiply;
+    background-size:contain;
+    background-position: center;
+    
+}
+
+img{
+
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+.flex-utility{
+    display: flex;
+    flex-direction: column;
+   
+}
+.transparency{
+
+    opacity: 0.05;
+}
+
+.wrapper{
+    
+
+display: grid;
+grid-template: auto auto /auto;
+grid-template-areas:
+"logo"
+"info-container"
+;
+
+}
+
+.logo-container{
+    
+    
+    padding:0;
+    margin:0;
+    
+    grid-area: logo;
+    display: grid;
+    grid-template: auto/ 1em auto 1em;
+
+    grid-template-areas: 
+    
+    ". image ."
+    
+    ;
+
+    justify-content: center;
+    
+ 
+}
+.image{
+
+    grid-area: image;
+    height: 300px;
+    aspect-ratio: 1/1;
+    
+}
+
+
+.info-container{
+
+    grid-area: info-container;
+    display: flex;
+    
+    align-items:center;
+    justify-content: center;
+    
+   
+     
+}
+
+/*-----------Buttons*/
+
+.button-container{
+ 
+
+border-radius: 15px; /* Adjust as needed */
+
+grid-area: button-container;
+display: flex;
+flex-direction: column;
+width: 90%;
+
+max-width: 350px;
+gap:1em;
+align-items: center;
+padding: .75em 1em;
+
+
+background: linear-gradient(
+      to right, /* Direction of the gradient */
+      rgba(151, 18, 1, 0.131), /* Start with a darker grey */
+      rgba(0, 125, 202, 0.352)
+        ); /* Transition to a lighter, mo */
+   
+}
+
+
+.btn--main{  
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    /* Adjust the width and padding to fit your content */
+    padding: .75em 1.5em;
+    
+
+  /* This will create the background color and text styling */
+  background-color: #ffffff; /* Dark gray background */
+  color: rgba(0, 0, 0, 0.841); /* White text */
+  text-align: center;
+  font-size: .8rem;
+  width: 90%;
+  
+
+  /* Creates rounded sides with a radius that's half of the height, resulting in a pill shape */
+  border-radius: 50px 0;
+
+  /* This will remove the border if there is one */
+  border: none;
+
+  /* Optional: Add some shadow for depth */
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+
+  /* Other potential properties for interaction */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  box-shadow: 2px 4px 6px 0 rgba(48, 48, 48, 0.2); 
+  
+  padding: .75em 1.5em;
+     
+}
+
+.btn--main:hover{
+
+    background-color: #006195;
+    color: #c2c2c2;
+}
+
+.btn--main-v2{
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+      /* Adjust the width and padding to fit your content */
+ 
+
+  /* This will create the background color and text styling */
+  background-color: #ffffff; /* Dark gray background */
+  color: rgb(0, 0, 0); /* White text */
+  text-align: center;
+  font-size: 1rem;
+  
+
+  /* Creates rounded sides with a radius that's half of the height, resulting in a pill shape */
+  border-radius: 50px 0;
+
+  /* This will remove the border if there is one */
+  border: none;
+
+  /* Optional: Add some shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  /* Other potential properties for interaction */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  box-shadow: 2px 4px 6px 0 rgba(3, 3, 3, 0.2); 
+  display: inline-block;
+
+}
+
+.btn--main-v2:hover{
+
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-side-v1{
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    /* Adjust the width and padding to fit your content */
+    padding: .75em 1.5em;
+    
+
+  /* This will create the background color and text styling */
+  background-color: #004970; /* Dark gray background */
+  color: white; /* White text */
+  text-align: left;
+  font-size: .75rem;
+  
+
+  /* Creates rounded sides with a radius that's half of the height, resulting in a pill shape */
+  border-radius: 50px 0;
+
+  /* This will remove the border if there is one */
+  border: none;
+
+  /* Optional: Add some shadow for depth */
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+
+  /* Other potential properties for interaction */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  box-shadow: 2px 4px 6px 0 rgba(48, 48, 48, 0.2); 
+  
+  padding: .75em 1.5em;
+
+}
+.close{
+
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+
+
+
+/*--------------------Pages*/
+
+.more-info-page{
+
+    position: fixed;
+    width:100%;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:-100%; /* dit move hom basies regs van die skerm af*/
+    transform: translateX(0);
+    transition: .5s;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.952);
+    background: linear-gradient(
+  to right, /* Direction of the gradient */
+  rgb(14, 14, 14), /* Start with a darker grey */
+  rgb(54, 54, 54) /* Transition to a lighter, more transparent grey */
+);
+
+
+
+}
+
+.page-open{
+
+    transform: translateX(100%);
+}
+
+.more-info-page p{
+
+    margin-left: .25em;
+    margin-top: .25em;
+    margin-bottom: 3em;
+}
+
+
+
+.page-content .btn-side-v1{
+
+height: 100%;
+display: flex;
+flex-direction: column;
+
+margin-left: 3em;
+width: 60%; 
+margin-bottom: 0;
+margin-top: 3.5em;
+    
+}
+
+.more-info-container{
+
+    padding: 0;
+    padding-left: 1em ;
+    height: 0px;
+    overflow: hidden;
+    transition:.5s;
+    border: none;
+    border-radius: 5px;
+    background-color:#1111118f;
+    font-size: .75rem;
+    width: 85%;
+    max-width: 600px;
+    margin-left: 3em;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    color: #777777;
+    
+    
+
+}
+
+.active{
+
+   height: auto;
+    
+    margin-top: .75em;
+}
+
+.alternative-labels{
+
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+@media(min-width:450px) {
+   .image{
+
+    height: 400px;
+    aspect-ratio: 1/1;
+    
+   }
+
+   .btn--main{
+
+    width:100%;
+
+   }
+
+}
+
+
+
+@media (min-width:700px) {
+
+    .wrapper{
+
+        width: 100%;
+        min-height: 100vh;
+        max-width: 1000px;
+        display: grid;
+        grid-template: auto/ 50% 50%;
+        grid-template-areas:
+        "logo info-container"
+        ;
+          
+    }
+
+    .image{
+
+        height: auto;
+        aspect-ratio: 1/1;
+        
+       }
+
+    .logo-container{
+        padding:0;
+        margin:0;
+        
+        grid-area: logo;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+
+        
+    }
+
+    .button-container{
+        background-color: rgba(255, 4, 4, 0.884);
+        background: linear-gradient(
+      to right, /* Direction of the gradient */
+      rgba(151, 18, 1, 0.131), /* Start with a darker grey */
+      rgba(0, 125, 202, 0.352)
+        ); /* Transition to a lighter, more transparent grey */
+
+      padding: 1em 1.5em;
+      
+      
+
+    }
+
+    .more-info-page{
+
+        width:50%;
+        left:-50%;
+
+        background-color: rgba(0, 0, 0, 0.233);
+        background: linear-gradient(
+            to right, /* Direction of the gradient */
+            rgba(151, 18, 1, 0.131), /* Start with a darker grey */
+            rgba(0, 125, 202, 0.352)
+              ); /* Transition to a lighter, mo0.473)) /* Transition to a lighter, more transparent grey */
+    }
+
+    
+
+   
+
+}
+
+
+@media(min-width:1000px) {
+
+    .wrapper{
+        
+        margin: 0 auto;
+
+        width: 100%;
+        
+        min-height: 100vh;
+    
+        display: grid;
+        grid-template: auto/ 50% 50%;
+        grid-template-areas:
+        "logo info-container"
+        ;
+          
+    }
+
+
+
+    .image{
+
+        height: auto;
+        aspect-ratio: 1/1;
+        
+       }
+
+
+
+}
